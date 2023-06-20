@@ -1,4 +1,60 @@
- /* FONTS DEFINITION
+ /* FONTS DEFINITION */
+
+ @font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/webfonts/JetBrainsMono-Regular.woff2") format("woff2"),
+         url("./fonts/ttf/JetBrainsMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ @font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/webfonts/JetBrainsMono-Bold.woff2") format("woff2"),
+         url("./fonts/ttf/JetBrainsMono-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+ }
+
+ @font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/webfonts/JetBrainsMono-Light.woff2") format("woff2"),
+         url("./fonts/ttf/JetBrainsMono-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+ }
+
+ @font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/webfonts/JetBrainsMono-Italic.woff2") format("woff2"),
+         url("./fonts/ttf/JetBrainsMono-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+ }
+
+ @font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/webfonts/JetBrainsMono-BoldItalic.woff2") format("woff2"),
+         url("./fonts/ttf/JetBrainsMono-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+ }
+
+ @font-face {
+    font-family: JetBrainsMono;
+    src: url("./fonts/webfonts/JetBrainsMono-ExtraBold.woff2") format("woff2"),
+         url("./fonts/ttf/JetBrainsMono-ExtraBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+ }
+
+ @font-face {
+   font-family: JetBrainsMono;
+   src: url("./fonts/webfonts/JetBrainsMono-ExtraLight.woff2") format("woff2"),
+        url("./fonts/ttf/JetBrainsMono-ExtraLight.ttf") format("truetype");
+   font-weight: 100;
+   font-style: normal;
+}
 
 
-  END OF FONT DEFINITION */
+ /* END OF FONT DEFINITION */
