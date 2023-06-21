@@ -15,6 +15,7 @@
 html{
 	background-color: var(--background-main);
 	color: var(--white);
+	font-family: 'JetBrainsMono', monospace;
 }
 
 .is-flex{
@@ -39,26 +40,25 @@ html{
 /* GREET BOX */
 
 .greet {
-	margin-left: 40px;
-	font-family: 'JetBrainsMono';
+	margin-left: 4em;
 }
 
 .greet h1 {
 	font-size: 4.2em;
 	font-weight: 700;
-	margin: 0px;
+	margin: 0;
 }
 
 .greet h2 {
 	font-size: 2.1em;
 	font-weight: bold;
-	margin: 0px;
+	margin: 0;
 }
 
 .greet h3 {
 	font-size: 1.5em;
 	font-weight: 300;
-	margin: 0px;
+	margin: 0;
 }
 
 /* END OF GREET BOX */
@@ -68,7 +68,23 @@ html{
 /* GENERIC INFO SECTION */
 
 .generic-info{
-	margin-top: 40px;
+	margin-top: 2em;
+	display: flex;
+	justify-content: center;
+}
+
+.main-info-box{
+	display: flex; 
+	flex-direction: column;
+	justify-content: space-between; 
+	width: 40%;
+	border-top: solid 3px var(--orange);
+}
+
+.main-info-text{
+	font-size: 1.06em;
+	margin-top: 0.7em;
+	text-align: center;
 }
 
 /* END OF GENERIC INFO SECTION */
@@ -78,14 +94,14 @@ html{
 /* TERMINAL WINDOW */
 
 .terminal {
-	font-family: 'JetBrainsMono';
 	font-weight: 200;
 	background-color: var(--main-darker);
-    border-radius: 10px;
+    border-radius: 0.8em;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,0.6), 0 0 0 1px rgba(10,10,10,.02);
     color: #838181;
     display: block;
     padding: 1.25rem;
+	margin-left: 2em;
 }
 
 .terminal-buttons {
@@ -93,7 +109,7 @@ html{
 }
 
 .terminal .terminal-buttons span{
-	margin-inline-end: 10px;
+	margin-inline-end: 0.9em;
     padding: 2px;
     display: block;
     height: 13px;
@@ -104,6 +120,26 @@ html{
 .terminal .terminal-buttons span:nth-child(1) { background: linear-gradient(rgb(255,0,0),rgb(255,81,0)); }
 .terminal .terminal-buttons span:nth-child(2) { background: linear-gradient(rgb(255,145,0),rgb(255,230,0)); }
 .terminal .terminal-buttons span:nth-child(3) { background: linear-gradient(rgb(6,184,0),rgb(0,255,85)); }
+
+.terminal ul {
+	list-style: ">";
+	color: var(--green);
+}
+
+.navigation-link{
+	margin-bottom: 1em;
+}
+
+.navigation-link a{
+	text-decoration: none;
+	color: var(--green);
+	margin-left: 0.8em;
+}
+.navigation-link a:hover{
+	text-decoration: underline;
+	font-weight: 600;
+	font-size: medium;
+}
 
 /* END OF TERMINAL WINDOW */
 
@@ -175,6 +211,30 @@ html{
 }
 
 /* END "CONTACT ME" */
+
+/* =============================================== */
+
+/* TYPING EFFECT */
+
+.typewriter h1 {
+	color: var(--white);
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: .15em solid var(--green); /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	letter-spacing: .15em; /* Adjust as needed */
+	animation: 
+	  typing 3.5s steps(16, end),
+	  blink-caret .5s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+/* END OF TYPING EFFECT */
 
 /* =============================================== */
 

@@ -56,5 +56,21 @@
    font-style: normal;
 }
 
+@font-face {
+     font-family: JetBrainsMono;
+     src: url("./fonts/webfonts/JetBrainsMono-SemiBold.woff2") format("woff2"),
+          url("./fonts/ttf/JetBrainsMono-SemiBold.ttf") format("truetype");
+     font-weight: 600;
+     font-style: normal;
+  }
+
+  @font-face {
+     font-family: JetBrainsMono;
+     src: url("./fonts/webfonts/JetBrainsMono-SemiBoldItalic.woff2") format("woff2"),
+          url("./fonts/ttf/JetBrainsMono-SemiBoldItalic.ttf") format("truetype");
+     font-weight: 600;
+     font-style: italic;
+  }
+
 
  /* END OF FONT DEFINITION */
