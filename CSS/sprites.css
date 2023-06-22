@@ -1,0 +1,9 @@
+/* SPRITE DEFINITION */
+
+#settings {
+    height: 50px;
+    width: 50px;
+    background: url(../images/icons/settings.png) 0 0;
+}
+
+/* END OF SPRITE DEFINITION */
