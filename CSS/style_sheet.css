@@ -210,7 +210,53 @@ html{
 	transform: translateX(0%);	
 }
 
+.contact-me-section{
+	display: flex;
+	justify-content:center;
+	margin-bottom: 4em;
+}
+
+.mail-sender-box{
+	display: flex;
+    width: 35%;
+    margin-right: 1em;
+    padding: 1em;
+    border-right: solid 3px var(--white);
+}
+
+/* .mail-sender-box textarea{
+	
+} */
+
+.contact-details{
+	width: 35%;
+	padding: 1em;
+}
+
+.contact-details p{
+	color: var(--orange);
+	text-decoration: underline;
+}
+
 /* END "CONTACT ME" */
+
+/* =============================================== */
+
+/* FOOTER */
+
+footer {
+	margin: -8px -8px -8px -8px;
+}
+
+section footer {
+	background-color: var(--main-darker);
+}
+
+footer div {
+	text-align: center;
+}
+
+/* END OF FOOTER */
 
 /* =============================================== */
 
