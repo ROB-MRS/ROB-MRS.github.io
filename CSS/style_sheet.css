@@ -322,4 +322,138 @@ footer div {
 
 /* END OF RESPONSIVE GRID */
 
+.field-box {
+	display: flex;
+	flex-direction: column;
+	gap: 1em; /* Space between input fields */
+  }
+  
+  .field {
+	position: relative;
+	height: 52px;
+	color: var(--white);
+	overflow: hidden;
+  }
+  
+  .field input {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: white;
+	line-height: 52px;
+	outline: 0;
+	background-color: inherit;
+	padding-top: 25px;
+	border: none;
+	box-sizing: border-box;
+  }
+  
+  .field .label-wrapper {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	background-color: inherit;
+	left: 0;
+	pointer-events: none;
+	border-bottom: 1px solid white;
+  }
+  
+  .field .label-wrapper::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-bottom: 3px solid #FF9950;
+	left: 0;
+	bottom: -1px;
+	transform: translateX(-100%);
+	transition: transform 0.2s ease;
+  }
+  
+  .field .label-text {
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.2s ease;
+  }
+  
+  .field input:focus + .label-wrapper .label-text,
+  .field input:valid + .label-wrapper .label-text {
+	font-size: 12px;
+	color: var(--orange);
+	transform: translateY(-150%);
+  }
+  
+  .field input:focus + .label-wrapper::after,
+  .field input:valid + .label-wrapper::after {
+	transform: translateX(0%);  
+  }
+  
+  .textarea-button-container {
+	display: flex;
+	flex-direction: column;
+	height: calc(52px * 3 + 2em); /* 3 inputs height + gap */
+  }
+  
+  textarea#message {
+	height: 100%;
+	resize: none; /* Disable resizing of textarea */
+	margin-bottom: 1em; /* Space between textarea and button */
+  }
+  
+  button {
+	height: 52px; /* Match the height of input fields */
+	cursor: pointer;
+	/* Add other styling for button here */
+  }
+  
+  .form-container {
+	display: flex;
+	justify-content: center; /* Centers the content blocks horizontally */
+	align-items: flex-start; /* Aligns items to the top */
+	gap: 0em; /* Spacing between the two blocks */
+  }
+  
+  .field-box, .textarea-button-container {
+	margin-top: 0;
+	margin-bottom: auto;
+  }
+
+  section {
+  display: flex; /* Aligns the children divs side by side */
+  justify-content: center; /* Centers them horizontally */
+  gap: 1em; /* Sets the separation between divs */
+}
+
+#input-fields-section, #textarea-section {
+  flex: 1; /* Allows both divs to grow and take available space */
+}
+
+#textarea-section {
+  display: flex;
+  flex-direction: column; /* Aligns the textarea and button vertically */
+  gap: 1rem; /* Space between textarea and button */
+  width: 150%; /* Width 1.5 times that of #input-fields-section */
+}
+
+textarea, button {
+  width: 100%; /* Full width of parent */
+  box-sizing: border-box; /* Includes padding and border in the element's width */
+}
+
+textarea {
+  height: calc(3.25rem * 3 + 2rem); /* Same height as three input fields plus their gaps */
+  padding: 0.5rem; /* Padding inside textarea */
+  resize: none; /* Disables resizing of textarea */
+}
+
+button {
+  height: 3.25rem; /* Same height as an individual input field */
+  background-color: var(--button-color); /* Replace with your button color */
+  color: white; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
 

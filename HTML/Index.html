@@ -1,128 +1,102 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="../CSS/style_sheet.css">
-		<link rel="stylesheet" type="text/css" href="../CSS/fonts.css">
-		<link rel="stylesheet" type="text/css" href="../CSS/media_queries.css">
-		<link rel="stylesheet" type="text/css" href="../CSS/sprites.css">
-		<title></title>
-	</head>
-	<body>
-		<header style="height: 50px;">
-		</header>
-		<section class="header-container" id="main-section">
-			<!-- Profile Pic -->
-			<div id="profile-pic">
-				<img src="../images/Profile_pic.jpg">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" type="text/css" href="../CSS/style_sheet.css"> -->
+	<link rel="stylesheet" type="text/css" href="../CSS/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/media_queries.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/sprites.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/test.css">
+	<title></title>
+</head>
+<body>
+	<!-- <header id="header-section">
+		<div id="logo-placeholder">MY LOGO</div>
+	</header> -->
+	<!-- Introduction Section -->
+	<section id="introduction-section">
+		<div class="container">
+			<div class="profile">
+				<img src="../images/Profile_pic.jpg" alt="Profile Picture" class="profile-pic">
 			</div>
-			<!-- Greeting Message -->
-			<div class="greet typewriter">
+			<div class="intro-text">
+				<div class="greet typewriter">
 				<h3>Hi there! My name is</h3>
 				<h1>Roberto Marsella</h1>
 				<h2>Software Engineer</h2>
-			</div>
-		</section>
-		<section class="generic-info">
-			<div class="main-info-box">
-				<div class="main-info-text">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque voluptate,
-					et animi excepturi voluptates nulla possimus accusamus repellat necessitatibus 
-					facilis nostrum quia quas, esse consequatur suscipit. Itaque, ea tempora.
-				</div>
-				<div>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque voluptate,
-					et animi excepturi voluptates nulla possimus accusamus repellat necessitatibus 
-					facilis nostrum quia quas, esse consequatur suscipit. Itaque, ea tempora.
 				</div>
 			</div>
-			<div class="terminal">
-				<div class="is-flex terminal-buttons">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div>
-					<p>C:// What will you find here?</p>
-					<ul>
-						<li class="navigation-link"><a href="#"> prova link 1</a></li>
-						<li class="navigation-link"><a href="#"> prova link 2</a></li>
-						<li class="navigation-link"><a href="#"> prova link 3</a></li>
-						<li class="navigation-link"><a href="#"> prova link 4</a></li>
-						<li class="navigation-link"><a href="#"> prova link 5</a></li>
-					</ul>
-				</div>
+		</div>
+  	</section>
+	<section id="content-section">
+		<div class="separator"></div>
+		<div class="content-container">
+		  <div class="left-content">
+			<div class="text-box">
+			  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus cumque voluptate,
+				et animi excepturi voluptates nulla possimus accusamus repellat necessitatibus 
+				facilis nostrum quia quas, esse consequatur suscipit. Itaque, ea tempora.</p>
 			</div>
-		</section>
-		<section style="height: 1000px;">
-			<!-- CONTENT OF THE WEBSITE -->
-		</section>
-		<section>
-			<div><h1 style="text-align: center;">Contact Me</h1></div>
-			<div class="contact-me-section">
-				<div class="mail-sender-box">
-					<div class="field-box">
-						<div class="field">
-							<input 
-							type="text" 
-							name="first-name"
-							autocomplete="off"
-							required 
-							>
-							<label for="first-name" class="label-wrapper">
-								<span class="label-text">
-									First Name
-								</span>
-							</label>
-						</div>
-						<div class="field">
-							<input 
-							type="text" 
-							name="last-name"
-							autocomplete="off"
-							required 
-							>
-							<label for="last-name" class="label-wrapper">
-								<span class="label-text">
-									Last Name
-								</span>
-							</label>
-						</div>
-						<div class="field">
-							<input 
-							type="email" 
-							name="email-name"
-							autocomplete="off"
-							required 
-							>
-							<label for="email" class="label-wrapper">
-								<span class="label-text">
-									Email
-								</span>
-							</label>
-						</div>
+			<div class="icon-links">
+			  <!-- Icons to be discussed and added later -->
+			</div>
+		  </div>
+		  <div class="terminal">
+			<div class="terminal-buttons">
+			  <span class="button-red"></span>
+			  <span class="button-yellow"></span>
+			  <span class="button-green"></span>
+			</div>
+			<div class="terminal-content">
+			  <p>Rob@Book ~ % ls</p>
+			  <ul>
+				<li class="navigation-link"><a href="#">prova link 1</a></li>
+				<li class="navigation-link"><a href="#">prova link 2</a></li>
+				<li class="navigation-link"><a href="#">prova link 3</a></li>
+				<li class="navigation-link"><a href="#">prova link 4</a></li>
+				<li class="navigation-link"><a href="#">prova link 5</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<section style="height: 1600px;">
+		main content
+	</section>
+	<section id="contact-section">
+		<div class="separator"></div>
+		<h2>Contact Me</h2>
+	</section>
+	<section class="sender-section">
+		<div class="sender-container">
+			<div id="input-fields-section">
+				<div class="field-box">
+					<div class="field shorter">
+						<input type="text" name="first-name" autocomplete="off" spellcheck="false" required>
+						<label for="first-name" class="label-wrapper">
+						<span class="label-text">First Name</span>
+						</label>
 					</div>
-					<div class="textarea-box">
-						<textarea>
-							Scrivi il tuo testo qui
-						</textarea>
-						<div><button>Send</button></div>
+					<div class="field shorter">
+						<input type="text" name="last-name" autocomplete="off" spellcheck="false" required>
+						<label for="last-name" class="label-wrapper">
+						<span class="label-text">Last Name</span>
+						</label>
+					</div>
+					<div class="field">
+						<input type="email" name="email" autocomplete="off" spellcheck="false" required>
+						<label for="email" class="label-wrapper">
+						<span class="label-text">Email</span>
+						</label>
 					</div>
 				</div>
-				<div class="contact-details">
-					<span>email:</span><p>roberto.marsella@icloud.com</p>
-					<span>cell:</span><p>+39 392 728 8821</p>
-					<span>address:</span><p>Viale Cesare Pavese 160, 00144, Rome</p>
-				</div>
 			</div>
-		</section>
-		<section>
-			<!-- FOOTER -->
-			<footer>
-				<div>Roberto Marsella . Copiright &copy; 2023 | last update: 19-06-2023</div>
-			</footer>
-			<!-- END FOOTER -->
-		</section>
-	</body>
+			<div id="textarea-section">
+				<textarea name="message" required></textarea>
+				<button type="submit">Send</button>
+			</div>
+		</div>
+	</section>
+</body>
 </html>
