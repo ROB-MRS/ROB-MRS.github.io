@@ -475,7 +475,7 @@
 }
 
 .projects-wrapper {
-  gap: 10px;
+  gap: 20px;
   display: flex;
   flex-direction: column
 }
@@ -496,22 +496,76 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  padding: 18px;
-  border-radius: 5px;
-  border: 1px solid #2d2d2d;
-  transition: border .2s ease;
+  transition: border .2s ease, transform .2s ease;
   font-size: 14px;
   height: 150px;
-  background-color: #1c1c1c;
-  box-shadow: 0 2px 3px #0000003d
+  border-radius: 7px;
 }
 
-.projects-card:hover .projects-card-gardient {
-  background: radial-gradient(100% 100% at 0% 0%,hsla(0,0%,100%,.05),transparent)
+/* TEST TERMINLA STYLE */
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  height: 28px;
+  background-color: #DAD9D9;
+  /* margin: 0 auto; */
+  font-family: monospace;
+  /* padding: auto; */
+  /* float: none; */
+  border-radius: 7px 7px 0px 0px; /* top-right top-left bottom-right bottom-left */
+  width:100%
 }
+
+.terminal-button{
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+  box-shadow: 1px 1px #00000043;
+}
+
+.red {
+  background: linear-gradient(rgb(255,0,0),rgb(255,81,0));
+  margin-left: 10px;
+}
+.yellow {
+  background: linear-gradient(rgb(255,145,0),rgb(255,230,0));
+}
+.green {
+  background: linear-gradient(rgb(6,184,0),rgb(0,255,85));
+}
+.screen {
+  background-color: #486584;
+  /* width: 750px; */
+  /* height: 450px; */
+  border-radius: 0px 0px 7px 7px;
+  margin: 0 auto;
+  padding: 0px;
+  width:100%;
+  height: 100%;
+}
+.font {
+padding-left: 30px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 15px;
+  text-align: left;
+  position: static;
+}
+/* ################### */
+
+
+/* .projects-card:hover .projects-card-gardient {
+  background: radial-gradient(100% 100% at 0% 0%,hsla(0,0%,100%,.05),transparent)
+} */
 
 .projects-card:hover {
-  border: 1px solid #4c4c4c
+  /* border: 1px solid #4c4c4c; */
+  box-shadow: 5px 5px 5px rgba(32, 32, 32, 0.658);
+  transform: scale(1.05)
 }
 
 .projects-card-links {
@@ -548,7 +602,7 @@
 
 @media screen and (min-width: 926px) {
   .projects-wrapper {
-      gap:10px;
+      gap:25px;
       display: grid;
       grid-template-columns: repeat(2,1fr)
   }
@@ -616,7 +670,7 @@
 
 @media screen and (min-width: 495px) {
   .projects-card {
-      padding:30px;
+      /* padding:30px; */
       align-items: center
   }
 
