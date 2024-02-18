@@ -9499,7 +9499,7 @@ function bd() {
     const {title: e, description: t, experiences: n, education: k} = dc;
     return v.jsxs("div", {
         className: "about-container",
-        children: [v.jsx("h1", {
+        children: [v.jsx("h2", {
             className: "about-title",
             children: e
         }), 
@@ -10228,6 +10228,35 @@ function dp() {
             cy: "0.6",
             r: "0.6",
             transform: "matrix(-0.958827 0.28399 -0.613701 -0.789538 586.887 448.488)",
+            fill: "white"
+        }),
+        v.jsx("circle", {
+            cx: "0.6",
+            cy: "0.6",
+            r: "0.6",
+            transform: "matrix(-0.958827 0.28399 -0.613701 -0.789538 100.123 200.456)",
+            fill: "white"
+        }),
+        v.jsx("circle", {
+            cx: "0.6",
+            cy: "0.6",
+            r: "0.6",
+            transform: "matrix(-0.958827 0.28399 -0.613701 -0.789538 400.789 300.123)",
+            fill: "white"
+        }),
+        // Add more elements here with different random positions
+        v.jsx("circle", {
+            cx: "0.6",
+            cy: "0.6",
+            r: "0.6",
+            transform: "matrix(-0.958827 0.28399 -0.613701 -0.789538 700.456 500.789)",
+            fill: "white"
+        }),
+        v.jsx("circle", {
+            cx: "0.6",
+            cy: "0.6",
+            r: "0.6",
+            transform: "matrix(-0.958827 0.28399 -0.613701 -0.789538 900.123 600.456)",
             fill: "white"
         })]
     })
