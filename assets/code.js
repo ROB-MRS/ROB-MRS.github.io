@@ -9458,7 +9458,10 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
         }), v.jsxs("div", {
             children: [v.jsx("h2", {
                 className: "about-experience-title",
-                children: [t,c]
+                children: t
+            }), v.jsx("h2", {
+                className: "about-experience-title",
+                children: c
             }), v.jsx("p", {
                 className: "about-experience-description",
                 children: n
@@ -9481,7 +9484,10 @@ function edd({date: e, title: t, uni: u, description: n}) {
         }), v.jsxs("div", {
             children: [v.jsx("h2", {
                 className: "about-experience-title",
-                children: [t,u]
+                children: t
+            }), v.jsx("h2", {
+                className: "about-experience-title",
+                children: u
             }), v.jsx("p", {
                 className: "about-experience-description",
                 children: n
