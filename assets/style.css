@@ -929,8 +929,21 @@ a,button {
 .download-button {
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 
-.download-button p{
-  margin-right: 14px;
+.download-button p {
+  font-size: 15px;
+  font-style: italic;
 }
+
+.download-button svg {
+  font-size: 30px;
+  color: var(--text-color)
+}
+
+.download-button *:hover{
+  color: var(--blue)
+}
+
+
