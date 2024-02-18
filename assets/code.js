@@ -9409,14 +9409,27 @@ const dc = {
     description: "Hi, I'm Roberto Marsella. Something about me...",
     experiences: [{
         date: "Feb 2023 - Aug 2023",
-        title: "Deloitte & Touche",
+        title: "Software Engineer",
+        company: "Deloitte & Touche",
         description: "What I did",
         technologies: ["C#", ".NET"]
     }, {
         date: "Aug 2022 - Dec 2022",
-        title: "LazioChain Researc Project",
+        title: "Blockchain - Smart Contract Developer",
+        company: "Lazio Chain Research Project",
         description: "What I did",
         technologies: ["EOSIO"]
+    }],
+    education: [{
+        date: "Sept 2023 - Present",
+        title: "MSc Fintech with Business Analytics",
+        uni: "University of Westminster",
+        description: "description of the master",
+    }, {
+        date: "Sept 2019 - Dec 2022",
+        title: "BSc Computer Science and Engineering",
+        uni: "Universitá degli Studi Roma Tre",
+        description: "description of the bsc",
     }],
     skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"]
 };
@@ -9436,7 +9449,7 @@ function Jd() {
         })]
     })
 }
-function qd({date: e, title: t, description: n, technologies: r}) {
+function qd({date: e, title: t, company: c, description: n, technologies: r}) {
     return v.jsxs("div", {
         className: "about-experience-item",
         children: [v.jsx("div", {
@@ -9445,7 +9458,7 @@ function qd({date: e, title: t, description: n, technologies: r}) {
         }), v.jsxs("div", {
             children: [v.jsx("h2", {
                 className: "about-experience-title",
-                children: t
+                children: [t,c]
             }), v.jsx("p", {
                 className: "about-experience-description",
                 children: n
@@ -9459,8 +9472,25 @@ function qd({date: e, title: t, description: n, technologies: r}) {
         })]
     })
 }
+function edd({date: e, title: t, uni: u, description: n}) {
+    return v.jsxs("div", {
+        className: "about-experience-item",
+        children: [v.jsx("div", {
+            className: "about-experience-date",
+            children: e
+        }), v.jsxs("div", {
+            children: [v.jsx("h2", {
+                className: "about-experience-title",
+                children: [t,u]
+            }), v.jsx("p", {
+                className: "about-experience-description",
+                children: n
+            })]
+        })]
+    })
+}
 function bd() {
-    const {title: e, description: t, experiences: n} = dc;
+    const {title: e, description: t, experiences: n, education: k} = dc;
     return v.jsxs("div", {
         className: "about-container",
         children: [v.jsx("h1", {
@@ -9487,9 +9517,21 @@ function bd() {
             }), n.map((r,l)=>v.jsx(qd, {
                 date: r.date,
                 title: r.title,
+                company: r.company,
                 description: r.description,
                 technologies: r.technologies
-            }, l))]
+            }, l))],
+        }), v.jsxs("div", {
+            className: "about-experience-section",
+            children: [v.jsx("h2", {
+                className: "about-experience-heading",
+                children: "Education"
+            }), k.map((r,l)=>v.jsx(edd, {
+                date: r.date,
+                title: r.title,
+                uni: r.uni,
+                description: r.description
+            }, l))],
         })]
     })
 }
