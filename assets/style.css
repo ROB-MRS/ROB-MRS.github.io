@@ -202,7 +202,8 @@
 .about-container {
   gap: 10px;
   display: flex;
-  flex-direction: column
+  flex-direction: column;
+  padding-top: 70px; /* for navbar spacing */
 }
 
 .about-title {
@@ -357,7 +358,8 @@
   gap: 20px;
   display: flex;
   margin-top: 60px;
-  flex-direction: column
+  flex-direction: column;
+  padding-top: 70px; /* for navbar spacing */
 }
 
 .writings-headline {
@@ -477,7 +479,8 @@
   gap: 20px;
   display: flex;
   margin-top: 50px;
-  flex-direction: column
+  flex-direction: column;
+  padding-top: 70px; /* for navbar spacing */
 }
 
 .projects-headline {
@@ -851,6 +854,11 @@ padding-left: 30px;
   .hero-wrapper-description {
       max-width: 350px;
       font-size: 14px
+  }
+
+  .hero {
+    height: 30vh;
+    padding-top: 6vh;
   }
 }
 
