@@ -932,18 +932,28 @@ a,button {
   flex-direction: row;
 }
 
+.download-button * {
+  transition: all 0.1s ease;
+}
+
 .download-button p {
-  font-size: 15px;
+  font-size: 13px;
   font-style: italic;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .download-button svg {
-  font-size: 30px;
-  color: var(--text-color)
+  font-size: 22px;
+  color: var(--text-color);
+  
 }
 
-.download-button *:hover{
-  color: var(--blue)
+.download-button path:hover{
+  fill: var(--blue);
 }
 
 

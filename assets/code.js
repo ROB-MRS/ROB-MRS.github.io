@@ -9541,9 +9541,13 @@ function bd() {
         }), v.jsx("div", {
             className: "about-experience-section download-button",
             children: [v.jsx("p", {
-                children: "Download my full CV"
-            }), v.jsx("a", {
-                children: [v.jsx(dw, {})]
+                onClick: () => {
+                    const link = document.createElement('a');
+                    link.href = '/assets/data/CV Roberto Marsella.pdf';
+                    link.download = 'CV Roberto Marsella.pdf';
+                    link.click();
+                },
+                children: ["Download my CV", v.jsx(dw, {})]
             })]
         })]
     })
