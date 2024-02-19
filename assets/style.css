@@ -207,7 +207,8 @@
 
 .about-title {
   font-size: 32px;
-  font-weight: 400
+  font-weight: 400;
+  padding-top: 15px;
 }
 
 .about-experience-heading,.skills-heading {
@@ -361,7 +362,8 @@
 
 .writings-headline {
   font-size: 32px;
-  font-weight: 400
+  font-weight: 400;
+  padding-top: 15px;
 }
 
 .writings-cards-container {
@@ -480,7 +482,8 @@
 
 .projects-headline {
   font-size: 32px;
-  font-weight: 400
+  font-weight: 400;
+  padding-top: 15px;
 }
 
 .projects-wrapper {
