@@ -292,10 +292,11 @@
 }
 
 .skills-wrapper {
-  gap: 6px;
+  /* gap: 6px; */
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px
+  font-size: 12px;
+  justify-content: center;
 }
 
 .skills-wrapper span {
@@ -345,7 +346,7 @@
   }
 
   .skills-wrapper {
-      gap: 7px;
+      /* gap: 7px; */
       font-size: 14px
   }
 
@@ -524,7 +525,7 @@
   flex-direction: row;
   align-items: center;
   text-align: center;
-  height: 28px;
+  height: 25px;
   background-color: #DAD9D9;
   /* margin: 0 auto; */
   font-family: monospace;
@@ -532,6 +533,31 @@
   /* float: none; */
   border-radius: 7px 7px 0px 0px; /* top-right top-left bottom-right bottom-left */
   width:100%
+}
+
+.bar p {
+  color: black;
+  width: 70%;
+}
+
+.bar-finder {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  height: 23px;
+  background-color: #DAD9D9;
+  /* margin: 0 auto; */
+  font-family: monospace;
+  /* padding: auto; */
+  /* float: none; */
+  border-radius: 7px 7px 0px 0px; /* top-right top-left bottom-right bottom-left */
+  width:80%;
+}
+
+.bar-finder p {
+  color: black;
+  width: 70%;
 }
 
 .terminal-button{
@@ -561,7 +587,21 @@
   padding: 0px;
   width:100%;
   height: 100%;
+  font-family: monospace;
 }
+
+.screen-finder {
+  background-color: #33075a;
+  /* width: 750px; */
+  /* height: 450px; */
+  border-radius: 0px 0px 7px 7px;
+  margin: 0 auto;
+  padding: 10px;
+  width:80%;
+  /* height: 200px; */
+  font-family: monospace;
+}
+
 .font {
 padding-left: 30px;
   color: #fff;

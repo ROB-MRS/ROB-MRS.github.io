@@ -9431,7 +9431,8 @@ const dc = {
         uni: "Universitá degli Studi Roma Tre",
         description: "description of the bsc",
     }],
-    skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"]
+    skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"],
+    techs: []
 };
 function Jd() {
     return v.jsxs("div", {
@@ -9441,14 +9442,27 @@ function Jd() {
             children: "Technical Skills"
         }), v.jsx("div", {
             className: "skills-wrapper",
-            children: dc.skills.map((e,t)=>v.jsx(He.Fragment, {
-                children: v.jsx("span", {
-                    children: e
-                })
-            }, t))
+            children: [v.jsx("div", {
+                className: "bar-finder",
+                children: [v.jsx("div", {
+                    className: "terminal-button red"
+                }), v.jsx("div", {
+                    className: "terminal-button yellow"
+                }), v.jsx("div", {
+                    className: "terminal-button green"
+                }), v.jsx("p", {children: "~ Documents/Tech-Skills"})]
+            }), v.jsx("div", {
+                className: "screen-finder",
+                children: "Test di come viene"
+            })]
         })]
     })
 }
+
+function terms({}){
+
+}
+
 function qd({date: e, title: t, company: c, description: n, technologies: r}) {
     return v.jsxs("div", {
         className: "about-experience-item",
@@ -9985,7 +9999,7 @@ function ap() {
                         className: "terminal-button yellow"
                     }),v.jsx("div", {
                         className: "terminal-button green"
-                    })]
+                    }), /* v.jsx("p", {children: "~ Documents/Projects"}) */]
                 }), v.jsx("div", {
                     className: "screen",
                     children: [// v.jsx("div", {
