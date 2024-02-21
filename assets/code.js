@@ -9453,14 +9453,79 @@ function Jd() {
                 }), v.jsx("p", {children: "~ Documents/Tech-Skills"})]
             }), v.jsx("div", {
                 className: "screen-finder",
-                children: "Test di come viene"
+                children: [v.jsx(py, {}), 
+                    v.jsx(java, {}),
+                    v.jsx(c, {}),
+                    v.jsx(csh, {})]
             })]
         })]
     })
 }
 
-function terms({}){
+// LANGUAGES SVG CREATION
 
+function py() {
+    return v.jsxs("div", {
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/py.svg",
+                    alt: "Python Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Python"
+            })
+        ]
+    });
+}
+
+function java() {
+    return v.jsxs("div", {
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/java.svg",
+                    alt: "Java Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Java"
+            })
+        ]
+    });
+}
+
+function c() {
+    return v.jsxs("div", {
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/c.svg",
+                    alt: "C Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "C lang"
+            })
+        ]
+    });
+}
+
+function csh() {
+    return v.jsxs("div", {
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/cs.svg",
+                    alt: "C# Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "C#"
+            })
+        ]
+    });
 }
 
 function qd({date: e, title: t, company: c, description: n, technologies: r}) {
@@ -9726,6 +9791,7 @@ function rp(e) {
 //         }]
 //     })(e)
 // }
+
 function hc(e) {
     return Ot({
         tag: "svg",

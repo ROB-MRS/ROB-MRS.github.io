@@ -600,6 +600,10 @@
   width:80%;
   /* height: 200px; */
   font-family: monospace;
+  color: var(--white-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .font {
