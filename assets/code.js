@@ -9432,8 +9432,8 @@ const dc = {
         description: "description of the bsc",
     }],
     skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"],
-    techs: []
 };
+
 function Jd() {
     return v.jsxs("div", {
         className: "skills-container",
@@ -9450,13 +9450,42 @@ function Jd() {
                     className: "terminal-button yellow"
                 }), v.jsx("div", {
                     className: "terminal-button green"
-                }), v.jsx("p", {children: "~ Documents/Tech-Skills"})]
+                }), v.jsx("p", {children: "~ Documents/Languages"})]
             }), v.jsx("div", {
                 className: "screen-finder",
                 children: [v.jsx(py, {}), 
                     v.jsx(java, {}),
                     v.jsx(c, {}),
-                    v.jsx(csh, {})]
+                    v.jsx(csh, {}),
+                    v.jsx(htm, {}),
+                    v.jsx(css, {})]
+            })]
+        }), v.jsx("div", {
+            className: "skills-wrapper",
+            children: [v.jsx("div", {
+                className: "bar-finder",
+                children: [v.jsx("div", {
+                    className: "terminal-button red"
+                }), v.jsx("div", {
+                    className: "terminal-button yellow"
+                }), v.jsx("div", {
+                    className: "terminal-button green"
+                }), v.jsx("p", {children: "~ Documents/Libraries"})]
+            }), v.jsx("div", {
+                className: "screen-finder",
+                children: [v.jsx("div", {
+                    children: [v.jsx(npy, {}), 
+                        v.jsx(pds, {}),
+                        v.jsx(mtp , {}),
+                        v.jsx(skl , {}),
+                        v.jsx(flk, {})]
+                }), v.jsx("div", {
+                    children: [v.jsx(sprg, {}), 
+                        v.jsx(juc, {})]
+                }), v.jsx("div", {
+                    children: [v.jsx(net, {}), 
+                        v.jsx(xmr, {})]
+                })]
             })]
         })]
     })
@@ -9464,12 +9493,48 @@ function Jd() {
 
 // LANGUAGES SVG CREATION
 
+function css() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/css.svg",
+                    alt: "CSS Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "CSS"
+            })
+        ]
+    });
+}
+
+function htm() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/html.svg",
+                    alt: "HTML Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "HTML"
+            })
+        ]
+    });
+}
+
 function py() {
     return v.jsxs("div", {
+        className: "skill-icon",
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
                     src: "/assets/icons/py.svg",
+                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
                     alt: "Python Icon"
                 })
             }),
@@ -9482,11 +9547,12 @@ function py() {
 
 function java() {
     return v.jsxs("div", {
+        className: "skill-icon",
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
-                    src: "/assets/icons/java.svg",
-                    alt: "Java Icon"
+                    src: "assets/icons/java.svg",
+                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
                 })
             }),
             v.jsx("div", {
@@ -9498,15 +9564,17 @@ function java() {
 
 function c() {
     return v.jsxs("div", {
+        className: "skill-icon",
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
                     src: "/assets/icons/c.svg",
+                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
                     alt: "C Icon"
                 })
             }),
             v.jsx("div", {
-                children: "C lang"
+                children: "C.lang"
             })
         ]
     });
@@ -9514,10 +9582,12 @@ function c() {
 
 function csh() {
     return v.jsxs("div", {
+        className: "skill-icon",
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
                     src: "/assets/icons/cs.svg",
+                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
                     alt: "C# Icon"
                 })
             }),
@@ -9527,6 +9597,162 @@ function csh() {
         ]
     });
 }
+
+function npy() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/numpy.svg",
+                    alt: "Numpy Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Numpy"
+            })
+        ]
+    });
+}
+
+function pds() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/pandas.svg",
+                    alt: "Pandas Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Pandas"
+            })
+        ]
+    });
+}
+
+function mtp() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/matplotlib.svg",
+                    alt: "Matplotlib Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Matplotlib"
+            })
+        ]
+    });
+}
+
+function skl() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/scikit.svg",
+                    alt: "Scikit Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Scikit-learn"
+            })
+        ]
+    });
+}
+
+function flk() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/flask.svg",
+                    alt: "Falsk Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Flask"
+            })
+        ]
+    });
+}
+
+function sprg() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/spring.svg",
+                    alt: "Spring Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Spring Boot"
+            })
+        ]
+    });
+}
+
+function juc() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/junit.svg",
+                    alt: "JUnit Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "JUnit"
+            })
+        ]
+    });
+}
+
+function net() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/net.svg",
+                    alt: ".Net Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: ".NET"
+            })
+        ]
+    });
+}
+
+function xmr() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/xamarin.svg",
+                    alt: "Xamarin Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Xamarin"
+            })
+        ]
+    });
+}
+
+
+// ##################################################################################
 
 function qd({date: e, title: t, company: c, description: n, technologies: r}) {
     return v.jsxs("div", {
