@@ -9460,34 +9460,25 @@ function Jd() {
                     v.jsx(htm, {}),
                     v.jsx(css, {})]
             })]
-        }), v.jsx("div", {
-            className: "skills-wrapper",
-            children: [v.jsx("div", {
-                className: "bar-finder",
-                children: [v.jsx("div", {
-                    className: "terminal-button red"
-                }), v.jsx("div", {
-                    className: "terminal-button yellow"
-                }), v.jsx("div", {
-                    className: "terminal-button green"
-                }), v.jsx("p", {children: "~ Documents/Libraries"})]
-            }), v.jsx("div", {
-                className: "screen-finder",
-                children: [v.jsx("div", {
-                    children: [v.jsx(npy, {}), 
-                        v.jsx(pds, {}),
-                        v.jsx(mtp , {}),
-                        v.jsx(skl , {}),
-                        v.jsx(flk, {})]
-                }), v.jsx("div", {
-                    children: [v.jsx(sprg, {}), 
-                        v.jsx(juc, {})]
-                }), v.jsx("div", {
-                    children: [v.jsx(net, {}), 
-                        v.jsx(xmr, {})]
-                })]
-            })]
-        })]
+        }), 
+        // v.jsx("div", {
+        //     className: "skills-wrapper",
+        //     children: [v.jsx("div", {
+        //         className: "bar-finder",
+        //         children: [v.jsx("div", {
+        //             className: "terminal-button red"
+        //         }), v.jsx("div", {
+        //             className: "terminal-button yellow"
+        //         }), v.jsx("div", {
+        //             className: "terminal-button green"
+        //         }), v.jsx("p", {children: "~ Documents/Others"})]
+        //     }), v.jsx("div", {
+        //         className: "screen-finder",
+        //         children: [v.jsx(git, {}), 
+        //                 v.jsx(msql, {})]
+        //     })]
+        // })
+    ]
     })
 }
 
@@ -9528,36 +9519,84 @@ function htm() {
 }
 
 function py() {
+    const [showPopoverOnHover, setShowPopoverOnHover] = P.useState(false);
+    const [showPopoverOnClick, setShowPopoverOnClick] = P.useState(false);
+
+    const handleMouseEnter = () => setShowPopoverOnHover(true);
+    const handleMouseLeave = () => {
+        if (!showPopoverOnClick) {
+            setShowPopoverOnHover(false);
+        }
+    };
+    const handleClick = () => {
+        setShowPopoverOnClick(!showPopoverOnClick);
+    };
+
+    const PopoverContent = () => v.jsxs("div", {
+        className: "absolute mt-2 w-48 popover ",
+        children: [v.jsx(npy, {}), 
+                v.jsx(pds, {}), 
+                v.jsx(skl, {}), 
+                v.jsx(mtp, {}), 
+                v.jsx(flk, {}),]
+    });
+
     return v.jsxs("div", {
-        className: "skill-icon",
+        className: "skill-icon relative",
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        // onClick: handleClick,
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
                     src: "/assets/icons/py.svg",
-                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
                     alt: "Python Icon"
                 })
             }),
             v.jsx("div", {
                 children: "Python"
-            })
+            }),
+            (showPopoverOnHover || showPopoverOnClick) && PopoverContent()
         ]
     });
 }
 
 function java() {
+    const [showPopoverOnHover, setShowPopoverOnHover] = P.useState(false);
+    const [showPopoverOnClick, setShowPopoverOnClick] = P.useState(false);
+
+    const handleMouseEnter = () => setShowPopoverOnHover(true);
+    const handleMouseLeave = () => {
+        if (!showPopoverOnClick) {
+            setShowPopoverOnHover(false);
+        }
+    };
+    const handleClick = () => {
+        setShowPopoverOnClick(!showPopoverOnClick);
+    };
+
+    const PopoverContent = () => v.jsxs("div", {
+        className: "absolute mt-2 w-48 popover",
+        children: [v.jsx(sprg, {}), 
+            v.jsx(juc, {}),]
+    });
+
     return v.jsxs("div", {
-        className: "skill-icon",
+        className: "skill-icon relative",
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        // onClick: handleClick,
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
-                    src: "assets/icons/java.svg",
-                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+                    src: "/assets/icons/java.svg",
+                    alt: "Java Icon"
                 })
             }),
             v.jsx("div", {
                 children: "Java"
-            })
+            }),
+            (showPopoverOnHover || showPopoverOnClick) && PopoverContent()
         ]
     });
 }
@@ -9581,19 +9620,41 @@ function c() {
 }
 
 function csh() {
+    const [showPopoverOnHover, setShowPopoverOnHover] = P.useState(false);
+    const [showPopoverOnClick, setShowPopoverOnClick] = P.useState(false);
+
+    const handleMouseEnter = () => setShowPopoverOnHover(true);
+    const handleMouseLeave = () => {
+        if (!showPopoverOnClick) {
+            setShowPopoverOnHover(false);
+        }
+    };
+    const handleClick = () => {
+        setShowPopoverOnClick(!showPopoverOnClick);
+    };
+
+    const PopoverContent = () => v.jsxs("div", {
+        className: "absolute mt-2 w-48 popover",
+        children: [v.jsx(net, {}), 
+            v.jsx(xmr, {}),]
+    });
+
     return v.jsxs("div", {
-        className: "skill-icon",
+        className: "skill-icon relative",
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        // onClick: handleClick,
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
                     src: "/assets/icons/cs.svg",
-                    // src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
                     alt: "C# Icon"
                 })
             }),
             v.jsx("div", {
                 children: "C#"
-            })
+            }),
+            (showPopoverOnHover || showPopoverOnClick) && PopoverContent()
         ]
     });
 }
@@ -9751,6 +9812,39 @@ function xmr() {
     });
 }
 
+function git() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/git.svg",
+                    alt: "Git Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "Git"
+            })
+        ]
+    });
+}
+
+function msql() {
+    return v.jsxs("div", {
+        className: "skill-icon",
+        children: [
+            v.jsx("div", {
+                children: v.jsx("img", {
+                    src: "/assets/icons/msql.svg",
+                    alt: "MS SQL Icon"
+                })
+            }),
+            v.jsx("div", {
+                children: "SQL"
+            })
+        ]
+    });
+}
 
 // ##################################################################################
 
