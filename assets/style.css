@@ -622,10 +622,16 @@ padding-left: 30px;
   margin: 10px;
   width: 2.7em;
   text-align: center;
+  cursor: pointer;
+  transition: all .3s ease;
 }
 
 .skill-icon img {
   margin-bottom: 7px;
+}
+
+.skill-icon:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 620px) {
@@ -1051,12 +1057,13 @@ a,button {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   color: var(--white-color);
-  z-index: 2;
+  padding: 10px;
+  gap: 10px;
 }
 
 @media screen and (max-width: 620px) {
-  .popover {
+  /* .popover {
     left: -15px;
-  }
+  } */
 }
 

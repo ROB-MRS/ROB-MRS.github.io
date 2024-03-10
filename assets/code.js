@@ -9453,8 +9453,8 @@ function Jd() {
                 }), v.jsx("p", {children: "~ Documents/Languages"})]
             }), v.jsx("div", {
                 className: "screen-finder",
-                children: [v.jsx(py, {}), 
-                    v.jsx(java, {}),
+                children: [v.jsx(java, {}), 
+                    v.jsx(py, {}),
                     v.jsx(c, {}),
                     v.jsx(csh, {}),
                     v.jsx(htm, {}),
@@ -9533,7 +9533,7 @@ function py() {
     };
 
     const PopoverContent = () => v.jsxs("div", {
-        className: "absolute mt-2 w-48 popover ",
+        className: "absolute popover ",
         children: [v.jsx(npy, {}), 
                 v.jsx(pds, {}), 
                 v.jsx(skl, {}), 
@@ -9545,7 +9545,7 @@ function py() {
         className: "skill-icon relative",
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        // onClick: handleClick,
+        onClick: handleClick,
         children: [
             v.jsx("div", {
                 children: v.jsx("img", {
@@ -9576,7 +9576,7 @@ function java() {
     };
 
     const PopoverContent = () => v.jsxs("div", {
-        className: "absolute mt-2 w-48 popover",
+        className: "absolute popover",
         children: [v.jsx(sprg, {}), 
             v.jsx(juc, {}),]
     });
@@ -9634,7 +9634,7 @@ function csh() {
     };
 
     const PopoverContent = () => v.jsxs("div", {
-        className: "absolute mt-2 w-48 popover",
+        className: "absolute popover",
         children: [v.jsx(net, {}), 
             v.jsx(xmr, {}),]
     });
