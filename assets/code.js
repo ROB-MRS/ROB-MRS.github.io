@@ -9451,6 +9451,18 @@ function Jd() {
         })]
     })
 }
+
+function matchTech(tech) {
+    switch (tech) {
+        case 'Python':
+            return 'dark-blue';
+        case 'Java':
+            return 'odark-orange';
+        case 'C#':
+            return 'dark-purple';
+    }
+}
+
 function qd({date: e, title: t, company: c, description: n, technologies: r}) {
     return v.jsxs("div", {
         className: "about-experience-item",
