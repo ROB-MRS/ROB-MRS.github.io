@@ -278,12 +278,14 @@
 }
 
 .about-experience-technology {
-  font-size: 12px;
-  color: var(--green);
-  border: 1px solid var(--green);
+  font-size: 14px;
+  /* color: var(--green); */
+  /* border: 1px solid var(--green); */
   padding: 3px 6px;
-  border-radius: 2px;
-  background-color: #40cf8f0f
+  /* border-radius: 2px; */
+  /* background-color: #40cf8f0f */
+  font-family: monospace;
+  display: flex;
 }
 
 .skills-container {
@@ -342,7 +344,7 @@
   }
 
   .about-experience-technology {
-      font-size: 13px;
+      font-size: 15px;
       padding: 5px 6px
   }
 
@@ -972,5 +974,61 @@ a,button {
 .about-experience-description li{
   margin-top: 1rem;
 }
+
+/* COLORS FOR TECHS */
+
+.dark-blue {
+  margin-right: 7px;
+  background: linear-gradient(rgb(0, 83, 184),rgb(62, 101, 254));
+}
+
+.dark-purple {
+  margin-right: 7px;
+  background: linear-gradient(rgb(101, 0, 184),rgb(144, 22, 250));
+}
+
+.normal-blue {
+  margin-right: 7px;
+  background: linear-gradient(rgb(0, 107, 184),rgb(0, 179, 255));
+}
+
+.dark-orange {
+  margin-right: 7px;
+  background: linear-gradient(rgb(195, 92, 7),rgb(255, 106, 0));
+}
+
+.normal-green {
+  margin-right: 7px;
+  background: linear-gradient(rgb(6,184,0),rgb(0,255,85));
+}
+
+.normal-red {
+  margin-right: 7px;
+  background: linear-gradient(rgb(184, 0, 0),rgb(255, 21, 0));
+}
+
+.normal-black {
+  margin-right: 7px;
+  background: linear-gradient(rgb(0, 0, 0),rgb(28, 28, 28));
+  border: 1px solid var(--text-color);
+}
+
+.normal-grey {
+  margin-right: 7px;
+  background: linear-gradient(rgb(97, 97, 97),rgb(141, 141, 141));
+}
+
+.bright-orange {
+  margin-right: 7px;
+  background: linear-gradient(rgb(255,145,0),rgb(255,230,0));
+}
+
+.normal-pink {
+  margin-right: 7px;
+  background: linear-gradient(rgb(201, 6, 130),rgb(221, 19, 150));
+}
+
+
+/* ################ */
 
 

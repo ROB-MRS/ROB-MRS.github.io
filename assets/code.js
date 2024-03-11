@@ -9412,13 +9412,13 @@ const dc = {
         title: "Software Engineer",
         company: "Deloitte & Touche",
         description: "I joined Deloitte's Technology Consulting team as a Software Engineer in the Back-End Development Team. I worked on a variety of small internal projects, but mainly on a large-scale web application for a major institutional client. My responsibilities included developing new features, fixing bugs, and maintaining the codebase and databases. My achievements included implementing and updating new complex algorithms aimed to the parsing and analysis of large Excel datasheets to be flawlessly integrated into the web application and used by the users. During this experience I had the change to collaborate with a team of very experienced engineers and I learned a lot about the best practices and the methodologies used in the industry.",
-        technologies: ["C#", ".NET"]
+        technologies: ["C#", ".NET", "SQL", "Excel"]
     }, {
         date: "Aug 2022 - Dec 2022",
         title: "Blockchain - Smart Contract Developer",
         company: "Lazio Chain Research Project",
         description: "I joined Lazio Chain Research Project during a collaboration with YHOP as an intern Blockchain Developer for my bachelor's final project. My work consisted of the development from scratch of a blockchain-based coupon system. My methodology started from the analysis of the domain, including all the actors involved, the business rules and the use cases. I then proceded by designing the architecture of the system (both on-chain and off-chain) and the smart contracts, and finally, I implemented the system using EOSIO blockchain. The outcome was a system with an aoutstanding operational efficiency, cheap to adopt and easly adaptable to different business models. The project was a success and it was presented at the university's final project exhibition, yielding 11/12 points.",
-        technologies: ["EOSIO"]
+        technologies: ["C++", "EOSIO"]
     }],
     education: [{
         date: "Sept 2023 - Present",
@@ -9455,11 +9455,33 @@ function Jd() {
 function matchTech(tech) {
     switch (tech) {
         case 'Python':
+        case 'Xamarin':
             return 'dark-blue';
         case 'Java':
-            return 'odark-orange';
+            return 'dark-orange';
         case 'C#':
             return 'dark-purple';
+        case 'C':
+        case '.NET':
+        case 'Numpy':
+        case 'CSS':
+            return 'normal-blue';
+        case 'HTML':
+        case 'Pandas':
+        case 'SQL':
+            return 'normal-red';
+        case 'Spring':
+        case 'Excel':
+            return 'normal-green';
+        case 'Scikit-learn':
+            return 'bright-orange';
+        case 'Flask':
+            return 'normal-black';
+        case 'Matplolib':
+        case 'EOSIO':
+            return 'normal-grey';
+        case 'C++':
+            return 'normal-pink';
     }
 }
 
@@ -9483,7 +9505,9 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
                 className: "about-experience-technologies",
                 children: r.map((l,i)=>v.jsx("span", {
                     className: "about-experience-technology",
-                    children: l
+                    children: [v.jsx('div', {
+                        className: `terminal-button ${matchTech(l)}`
+                    }), l]
                 }, i))
             })]
         })]
