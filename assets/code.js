@@ -9411,25 +9411,27 @@ const dc = {
         date: "Feb 2023 - Aug 2023",
         title: "Software Engineer",
         company: "Deloitte & Touche",
-        description: "What I did",
+        description: "I joined Deloitte's Technology Consulting team as a Software Engineer in the Back-End Development Team. I worked on a variety of small internal projects, but mainly on a large-scale web application for a major institutional client. My responsibilities included developing new features, fixing bugs, and maintaining the codebase and databases. My achievements included implementing and updating new complex algorithms aimed to the parsing and analysis of large Excel datasheets to be flawlessly integrated into the web application and used by the users. During this experience I had the change to collaborate with a team of very experienced engineers and I learned a lot about the best practices and the methodologies used in the industry.",
         technologies: ["C#", ".NET"]
     }, {
         date: "Aug 2022 - Dec 2022",
         title: "Blockchain - Smart Contract Developer",
         company: "Lazio Chain Research Project",
-        description: "What I did",
+        description: "I joined Lazio Chain Research Project during a collaboration with YHOP as an intern Blockchain Developer for my bachelor's final project. My work consisted of the development from scratch of a blockchain-based coupon system. My methodology started from the analysis of the domain, including all the actors involved, the business rules and the use cases. I then proceded by designing the architecture of the system (both on-chain and off-chain) and the smart contracts, and finally, I implemented the system using EOSIO blockchain. The outcome was a system with an aoutstanding operational efficiency, cheap to adopt and easly adaptable to different business models. The project was a success and it was presented at the university's final project exhibition, yielding 11/12 points.",
         technologies: ["EOSIO"]
     }],
     education: [{
         date: "Sept 2023 - Present",
         title: "MSc Fintech with Business Analytics",
         uni: "University of Westminster",
-        description: "description of the master",
+        description: "A Master focused on the study of the financial technology industry and the use of technology to deliver financial services. The course is designed to provide the students with knowledge about quantitative and technical topics such as blockchain, artificial intelligence, machine learning aimed to develop skills in data management, data mining, predictive analysis for financial services, and high frequency trading.",
+        mark: "Expected Mark: Distinction (Current Average: 78%)"
     }, {
         date: "Sept 2019 - Dec 2022",
         title: "BSc Computer Science and Engineering",
         uni: "Universitá degli Studi Roma Tre",
-        description: "description of the bsc",
+        description: "A Bachelor characterised by strong quantitative foundations (calculus, algebra, combinatory), coupled with a wide range of topics in software development and design, computer architecture, and data structures. During my journey, I developed strong understanding of the main programming paradigms (imperative, object oriented and functional), learning to use a variety of technologies and tools.",
+        mark: "Mark: 94% (104/110)"
     }],
     skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"]
 };
@@ -9475,7 +9477,7 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
         })]
     })
 }
-function edd({date: e, title: t, uni: u, description: n}) {
+function edd({date: e, title: t, uni: u, description: n , marks: mk}) {
     return v.jsxs("div", {
         className: "about-experience-item",
         children: [v.jsx("div", {
@@ -9490,7 +9492,9 @@ function edd({date: e, title: t, uni: u, description: n}) {
                 children: u
             }), v.jsx("p", {
                 className: "about-experience-description",
-                children: n
+                children: [n, v.jsx("li", {
+                    children: mk
+                })]
             })]
         })]
     })
@@ -9536,7 +9540,8 @@ function bd() {
                 date: r.date,
                 title: r.title,
                 uni: r.uni,
-                description: r.description
+                description: r.description,
+                marks: r.mark
             }, l))],
         }), v.jsx("div", {
             className: "about-experience-section download-button",

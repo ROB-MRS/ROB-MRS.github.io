@@ -252,7 +252,9 @@
 .about-experience-date {
   font-size: 14px;
   line-height: 1.5;
-  width: 200px
+  /* width: 220px; */
+  width: 180px;
+  font-family: monospace;
 }
 
 .about-experience-title {
@@ -965,6 +967,10 @@ a,button {
 
 .download-button path:hover{
   fill: var(--blue);
+}
+
+.about-experience-description li{
+  margin-top: 1rem;
 }
 
 
