@@ -9451,8 +9451,10 @@ function Jd() {
             children: dc.skills.map((e,t)=>v.jsx(He.Fragment, {
                 children: v.jsx("span", {
                     children:[v.jsx("div", {
-                        children: e.name
-                    }), v.jsx("div", {})]
+                        children: [v.jsx("") , e.name]
+                    }), v.jsx("div", {
+                        
+                    })]
                 })
             }, t))
         })]
