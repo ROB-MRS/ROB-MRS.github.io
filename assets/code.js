@@ -9411,7 +9411,7 @@ const dc = {
         date: "Feb 2023 - Aug 2023",
         title: "Software Engineer",
         company: "Deloitte & Touche",
-        description: "I joined Deloitte's Technology Consulting team as a Software Engineer in the Back-End Development Team. I worked on a variety of small internal projects, but mainly on a large-scale web application for a major institutional client. My responsibilities included developing new features, fixing bugs, and maintaining the codebase and databases. My achievements included implementing and updating new complex algorithms aimed to the parsing and analysis of large Excel datasheets to be flawlessly integrated into the web application and used by the users. During this experience I had the change to collaborate with a team of very experienced engineers and I learned a lot about the best practices and the methodologies used in the industry.",
+        description: "I joined Deloitte's Technology Consulting team as a Software Engineer in the Back-End Development Team. I worked on a variety of small internal projects, but mainly on a large-scale web application for a major institutional client. My responsibilities included developing new features, fixing bugs, and maintaining the codebase and databases. My achievements included implementing and updating new complex algorithms aimed to the parsing and analysis of large Excel datasheets to be flawlessly integrated into the web application and used by the users. During this experience I had the chance to collaborate with a team of very experienced engineers and I learned a lot about the best practices and the methodologies used in the industry.",
         technologies: ["C#", ".NET", "SQL", "Excel"]
     }, {
         date: "Aug 2022 - Dec 2022",
@@ -9433,7 +9433,12 @@ const dc = {
         description: "A Bachelor characterised by strong quantitative foundations (calculus, algebra, combinatory), coupled with a wide range of topics in software development and design, computer architecture, and data structures. During my journey, I developed strong understanding of the main programming paradigms (imperative, object oriented and functional), learning to use a variety of technologies and tools.",
         mark: "Mark: 94% (104/110)"
     }],
-    skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"]
+    skills: [{
+        name: "Python",
+        frameworks: ["Flask", "Scikit-learn", "Matplolib", "Numpy", "Pandas"],
+        level: "Medium",
+        logo: "xxx"
+    },{},{}]
 };
 function Jd() {
     return v.jsxs("div", {
@@ -9445,7 +9450,9 @@ function Jd() {
             className: "skills-wrapper",
             children: dc.skills.map((e,t)=>v.jsx(He.Fragment, {
                 children: v.jsx("span", {
-                    children: e
+                    children:[v.jsx("div", {
+                        children: e.name
+                    }), v.jsx("div", {})]
                 })
             }, t))
         })]
@@ -9513,6 +9520,7 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
         })]
     })
 }
+
 function edd({date: e, title: t, uni: u, description: n , marks: mk}) {
     return v.jsxs("div", {
         className: "about-experience-item",
