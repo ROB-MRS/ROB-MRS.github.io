@@ -9463,6 +9463,16 @@ const dc = {
         frameworks: [],
         level: "Junior",
         logo: "/assets/icons/css.svg"
+    },{
+        name: "Git",
+        frameworks: [],
+        level: "Pro",
+        logo: "/assets/icons/git.svg"
+    },{
+        name: "SQL",
+        frameworks: [],
+        level: "Pro",
+        logo: "/assets/icons/sql.svg"
     }]
 };
 
@@ -10400,7 +10410,7 @@ function pp() {
                 })]
             }), v.jsx("p", {
                 className: "hero-wrapper-description",
-                children: "I'm passionate about something....."
+                children: "I'm a little bit of a lot of things. Here are a few of them..."
             })]
         })]
     })
