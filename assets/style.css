@@ -296,18 +296,58 @@
 }
 
 .skills-wrapper {
-  gap: 6px;
+  gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px
+  font-size: 12px;
 }
 
 .skills-wrapper span {
   padding: 5px;
-  border-radius: 2px;
-  border: 1px solid #333333;
-  background-color: #232323;
-  box-shadow: 0 2px 3px #0000003d
+  background-color: #191919d9;
+  font-family: monospace;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.skill-header{
+  display: flex;
+  align-items: center;
+}
+
+.level-junior {
+  color: #16c748;
+  border: 1px solid #16c748;
+  border-radius: 15px;
+  padding: 1px 4px;
+  font-size: 9px;
+  height: 35%;
+  margin-left: 15px;
+}
+
+.level-mid {
+  color: #ff6524;
+  border: 1px solid #ff6524;
+  border-radius: 15px;
+  padding: 1px 4px;
+  font-size: 9px;
+  height: 35%;
+  margin-left: 15px;
+}
+
+.level-pro {
+  color: #8957E5;
+  border: 1px solid #8957E5;
+  border-radius: 15px;
+  padding: 1px 10px;
+  font-size: 9px;
+  height: 35%;
+  margin-left: 15px;
+}
+
+.skill-header img{
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 @media screen and (min-width: 970px) {
@@ -349,7 +389,7 @@
   }
 
   .skills-wrapper {
-      gap: 7px;
+      gap: 10px;
       font-size: 14px
   }
 
@@ -878,7 +918,7 @@ padding-left: 30px;
 
 :root {
   --green: #40cf8e;
-  --text-color: #bbbbbb;
+  --text-color: #c2c2c2;
   --white-color: #ededed;
   --black-color: #01040A;
   --blue: #A4D4FE;
@@ -1027,7 +1067,6 @@ a,button {
   margin-right: 7px;
   background: linear-gradient(rgb(201, 6, 130),rgb(221, 19, 150));
 }
-
 
 /* ################ */
 

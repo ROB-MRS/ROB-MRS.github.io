@@ -9436,10 +9436,42 @@ const dc = {
     skills: [{
         name: "Python",
         frameworks: ["Flask", "Scikit-learn", "Matplolib", "Numpy", "Pandas"],
+        level: "Pro",
+        logo: "/assets/icons/py.svg"
+    },{
+        name: "Java",
+        frameworks: ["Spring Boot", "J-Unit"],
+        level: "Pro",
+        logo: "/assets/icons/java.svg"
+    },{
+        name: "C",
+        frameworks: [],
         level: "Medium",
-        logo: "xxx"
-    },{},{}]
+        logo: "/assets/icons/c.svg"
+    },{
+        name: "C#",
+        frameworks: [".NET","Xamarin"],
+        level: "Medium",
+        logo: "/assets/icons/cs.svg"
+    },{
+        name: "HTML",
+        frameworks: [],
+        level: "Junior",
+        logo: "/assets/icons/html.svg"
+    },{
+        name: "CSS",
+        frameworks: [],
+        level: "Junior",
+        logo: "/assets/icons/css.svg"
+    }]
 };
+
+const levels = {
+    "Junior": "junior",
+    "Medium": "mid",
+    "Pro": "pro"
+}
+
 function Jd() {
     return v.jsxs("div", {
         className: "skills-container",
@@ -9451,7 +9483,11 @@ function Jd() {
             children: dc.skills.map((e,t)=>v.jsx(He.Fragment, {
                 children: v.jsx("span", {
                     children:[v.jsx("div", {
-                        children: [v.jsx("") , e.name]
+                        className: "skill-header",
+                        children: [v.jsx("img",{
+                            src: e.logo,
+                            alt: e.name
+                        }) ,v.jsx("span", {children: e.name}), v.jsx("div", {className: "level-"+levels[e.level], children: e.level})]
                     }), v.jsx("div", {
                         
                     })]
