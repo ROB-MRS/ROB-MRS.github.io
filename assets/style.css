@@ -214,7 +214,9 @@
 
 .about-experience-heading,.skills-heading {
   font-size: 18px;
-  font-weight: 400
+  font-weight: 400;
+  display: flex;
+  gap: 0.4em;
 }
 
 .about-description {
@@ -246,21 +248,31 @@
   gap: 10px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px
+  margin-bottom: 5px;
+  margin-top: 13px;
 }
 
 .about-experience-date {
   font-size: 14px;
   line-height: 1.5;
-  /* width: 220px; */
-  width: 180px;
+  /* width: 180px; */
   font-family: monospace;
 }
 
 .about-experience-title {
   font-size: 14px;
   margin-bottom: 10px;
-  font-weight: 400
+  font-weight: 400;
+}
+
+.about-education-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  background: #1f49b4;
+  border-radius: 5px;
+  padding: 3px;
+  text-align: center;
 }
 
 .about-experience-description {
@@ -379,8 +391,13 @@
       font-size: 22px
   }
 
-  .about-experience-date,.about-experience-title,.about-experience-description {
+  .about-experience-date,.about-experience-title,.about-education-title,.about-experience-description {
       font-size: 16px
+  }
+
+  .about-experience-date{
+    color: #848484d0;
+    font-size: 14px;
   }
 
   .about-experience-technology {

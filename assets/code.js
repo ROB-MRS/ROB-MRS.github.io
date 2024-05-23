@@ -9425,13 +9425,15 @@ const dc = {
         title: "MSc Fintech with Business Analytics",
         uni: "University of Westminster",
         description: "A Master focused on the study of the financial technology industry and the use of technology to deliver financial services. The course is designed to provide the students with knowledge about quantitative and technical topics such as blockchain, artificial intelligence, machine learning aimed to develop skills in data management, data mining, predictive analysis for financial services, and high frequency trading.",
-        mark: "Expected Mark: Distinction (Current Average: 78%)"
+        mark: "Expected Mark: Distinction (Current Average: 78%)",
+        id: "msc_",
     }, {
         date: "Sept 2019 - Dec 2022",
         title: "BSc Computer Science and Engineering",
         uni: "Universitá degli Studi Roma Tre",
         description: "A Bachelor characterised by strong quantitative foundations (calculus, algebra, combinatory), coupled with a wide range of topics in software development and design, computer architecture, and data structures. During my journey, I developed strong understanding of the main programming paradigms (imperative, object oriented and functional), learning to use a variety of technologies and tools.",
-        mark: "Mark: 94% (104/110)"
+        mark: "Mark: 94% (104/110)",
+        id: "bsc_",
     }],
     skills: [{
         name: "Python",
@@ -9487,7 +9489,10 @@ function Jd() {
         className: "skills-container",
         children: [v.jsx("h2", {
             className: "skills-heading",
-            children: "Technical Skills"
+            children: [v.jsx("img", {
+                src: "/assets/icons/labels/skills.svg",
+                alt: "Skills"
+            }) , "Technical Skills"]
         }), v.jsx("div", {
             className: "skills-wrapper",
             children: dc.skills.map((e,t)=>v.jsx(He.Fragment, {
@@ -9569,28 +9574,31 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
     })
 }
 
-function edd({date: e, title: t, uni: u, description: n , marks: mk}) {
+function edd({date: e, title: t, uni: u, description: n , marks: mk, id: i}) {
     return v.jsxs("div", {
         className: "about-experience-item",
         children: [v.jsx("div", {
             className: "about-experience-date",
             children: e
         }), v.jsxs("div", {
+            style: {width: 'fit-content'},
             children: [v.jsx("h2", {
                 className: "about-experience-title",
+                id: i,
                 children: t
-            }), v.jsx("h2", {
-                className: "about-experience-title",
+                }), v.jsx("h2", {
+                className: "about-education-title",
                 children: u
-            }), v.jsx("p", {
+            })]
+        }), v.jsx("p", {
                 className: "about-experience-description",
                 children: [n, v.jsx("li", {
                     children: mk
-                })]
             })]
         })]
     })
 }
+
 function bd() {
     const {title: e, description: t, experiences: n, education: k} = dc;
     return v.jsxs("div", {
@@ -9615,7 +9623,10 @@ function bd() {
             className: "about-experience-section",
             children: [v.jsx("h2", {
                 className: "about-experience-heading",
-                children: "Work Experience"
+                children: [v.jsx("img", {
+                    src: "/assets/icons/labels/work.svg",
+                    alt: "Work Experience"
+                }) , "Work Experience"]
             }), n.map((r,l)=>v.jsx(qd, {
                 date: r.date,
                 title: r.title,
@@ -9627,7 +9638,10 @@ function bd() {
             className: "about-experience-section",
             children: [v.jsx("h2", {
                 className: "about-experience-heading",
-                children: "Education"
+                children: [v.jsx("img", {
+                    src: "/assets/icons/labels/edu.svg",
+                    alt: "Education"
+                }) , "Education"]
             }), k.map((r,l)=>v.jsx(edd, {
                 date: r.date,
                 title: r.title,
@@ -10117,7 +10131,7 @@ function cp() {
     return v.jsxs("footer", {
         className: "footer",
         children: [v.jsx("span", {
-            children: "© 2024 Roberto Marsella - Camden Town, London - Last Update: 17 Feb 2024"
+            children: "© 2024 Roberto Marsella - London - Last Update: 21 May 2024"
         }), v.jsxs("div", {
             className: "footer-social",
             children: [v.jsx("a", {
