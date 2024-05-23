@@ -9552,12 +9552,15 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
             className: "about-experience-date",
             children: e
         }), v.jsxs("div", {
-            children: [v.jsx("h2", {
-                className: "about-experience-title",
-                children: t
-            }), v.jsx("h2", {
-                className: "about-experience-title",
-                children: c
+            children: [ v.jsx("div", {
+                style: {width: 'fit-content'},
+                children: [v.jsx("h2", {
+                    className: "about-experience-title",
+                    children: t
+                }), v.jsx("h2", {
+                    className: "about-experience-title institution",
+                    children: c
+                })]
             }), v.jsx("p", {
                 className: "about-experience-description",
                 children: n
@@ -9587,7 +9590,7 @@ function edd({date: e, title: t, uni: u, description: n , marks: mk, id: i}) {
                 id: i,
                 children: t
                 }), v.jsx("h2", {
-                className: "about-education-title",
+                className: "about-experience-title institution",
                 children: u
             })]
         }), v.jsx("p", {
