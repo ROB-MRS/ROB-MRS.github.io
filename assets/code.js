@@ -10021,14 +10021,16 @@ function Mp(e) {
 const Ju = {
     title: "Projects",
     projects: [{
-        name: "Project 1",
-        live: "https://tic-tac-emoji.vercel.app",
-        github: "https://github.com/mirayatech/tic-tac-emoji",
+        name: "YHOP Coupon System",
+        live: "https://github.com/ROB-MRS/YHOP-Coupon-System",
+        github: "https://github.com/ROB-MRS/YHOP-Coupon-System",
+        description: "A blockchain-based coupon system developed for the Lazio Chain Research Project to be efficient, cheap and easily adaptable to different business models.",
         languages: ["Tech1", "Tech2", "Tech3"]
     }, {
-        name: "Project 2",
-        live: "https://tic-tac-emoji.vercel.app",
-        github: "https://github.com/mirayatech/tic-tac-emoji",
+        name: "Jongo Mobile Application",
+        live: "https://github.com/ROB-MRS/Applicazione-Jongo",
+        github: "https://github.com/ROB-MRS/Applicazione-Jongo",
+        description: "A mobile application developed for the Jongo Project. The app is designed to help users to find the best deals in their area.",
         languages: ["Tech5", "Tech6", "Tech7"]
     }]
 };
@@ -10102,30 +10104,15 @@ function ap() {
                     })]
                 }), v.jsx("div", {
                     className: "screen",
-                    children: [// v.jsx("div", {
-                        //     className: "projects-card-gardient"
-                        // }), 
-                        v.jsxs("div", {
-                            className: "projects-card-links",
-                            children: [] // [v.jsx("a", {
-                            //     href: e.github,
-                            //     target: "_blank",
-                            //     children: v.jsx(hc, {})
-                            // }), v.jsx("a", {
-                            //     href: e.live,
-                            //     target: "_blank",
-                            //     children: v.jsx(op, {})
-                            // })]
-                        }), v.jsx("h3", {
-                            className: "projects-card-name",
-                            children:[] // e.name
-                        }), v.jsx("div", {
-                            className: "projects-card-languages",
-                            children: [] // e.languages.map(t=>v.jsx("span", {
-                                // children: t
-                            // }, t))
+                    children: [ v.jsxs("div", {
+                        children: [v.jsx("img", {
+                            src: "/assets/icons/labels/book.svg",
+                        }), e.name]
+                    }),
+                        v.jsx("p", {
+                            children: e.description
                         })]
-                })]
+                    })]
             }, e.name))
         })]
     })
