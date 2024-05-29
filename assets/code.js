@@ -9411,44 +9411,140 @@ const dc = {
         date: "Feb 2023 - Aug 2023",
         title: "Software Engineer",
         company: "Deloitte & Touche",
-        description: "What I did",
-        technologies: ["C#", ".NET"]
+        description: "I joined Deloitte's Technology Consulting team as a Software Engineer in the Back-End Development Team. I worked on a variety of small internal projects, but mainly on a large-scale web application for a major institutional client. My responsibilities included developing new features, fixing bugs, and maintaining the codebase and databases. My achievements included implementing and updating new complex algorithms aimed to the parsing and analysis of large Excel datasheets to be flawlessly integrated into the web application and used by the users. During this experience I had the chance to collaborate with a team of very experienced engineers and I learned a lot about the best practices and the methodologies used in the industry.",
+        technologies: ["C#", ".NET", "SQL", "Excel"]
     }, {
         date: "Aug 2022 - Dec 2022",
         title: "Blockchain - Smart Contract Developer",
         company: "Lazio Chain Research Project",
-        description: "What I did",
-        technologies: ["EOSIO"]
+        description: "I joined Lazio Chain Research Project during a collaboration with YHOP as an intern Blockchain Developer for my bachelor's final project. My work consisted of the development from scratch of a blockchain-based coupon system. My methodology started from the analysis of the domain, including all the actors involved, the business rules and the use cases. I then proceded by designing the architecture of the system (both on-chain and off-chain) and the smart contracts, and finally, I implemented the system using EOSIO blockchain. The outcome was a system with an aoutstanding operational efficiency, cheap to adopt and easly adaptable to different business models. The project was a success and it was presented at the university's final project exhibition, yielding 11/12 points.",
+        technologies: ["C++", "EOSIO"]
     }],
     education: [{
         date: "Sept 2023 - Present",
         title: "MSc Fintech with Business Analytics",
         uni: "University of Westminster",
-        description: "description of the master",
+        description: "A Master focused on the study of the financial technology industry and the use of technology to deliver financial services. The course is designed to provide the students with knowledge about quantitative and technical topics such as blockchain, artificial intelligence, machine learning aimed to develop skills in data management, data mining, predictive analysis for financial services, and high frequency trading.",
+        mark: "Expected Mark: Distinction (Current Average: 78%)",
+        id: "msc_",
     }, {
         date: "Sept 2019 - Dec 2022",
         title: "BSc Computer Science and Engineering",
         uni: "Universitá degli Studi Roma Tre",
-        description: "description of the bsc",
+        description: "A Bachelor characterised by strong quantitative foundations (calculus, algebra, combinatory), coupled with a wide range of topics in software development and design, computer architecture, and data structures. During my journey, I developed strong understanding of the main programming paradigms (imperative, object oriented and functional), learning to use a variety of technologies and tools.",
+        mark: "Mark: 94% (104/110)",
+        id: "bsc_",
     }],
-    skills: ["Culo", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Sass", "Tailwind", "Material-UI", "Git", "Framer-Motion", "Firebase", "Jira", "Cypress", "Playwright", "Storybook", "Styled-Components", "Zustand", "GraphQL", "GitLab", "Web Accessibility", "Nest.js", "Postman", "Insomnia", "Scrum", "Bitbucket", "Confluence"]
+    skills: [{
+        name: "Python",
+        frameworks: ["Flask", "Scikit-learn", "Matplolib", "Numpy", "Pandas"],
+        level: "Pro",
+        logo: "/assets/icons/py.svg"
+    },{
+        name: "Java",
+        frameworks: ["Spring Boot", "J-Unit"],
+        level: "Pro",
+        logo: "/assets/icons/java.svg"
+    },{
+        name: "C",
+        frameworks: [],
+        level: "Medium",
+        logo: "/assets/icons/c.svg"
+    },{
+        name: "C#",
+        frameworks: [".NET","Xamarin"],
+        level: "Medium",
+        logo: "/assets/icons/cs.svg"
+    },{
+        name: "HTML",
+        frameworks: [],
+        level: "Junior",
+        logo: "/assets/icons/html.svg"
+    },{
+        name: "CSS",
+        frameworks: [],
+        level: "Junior",
+        logo: "/assets/icons/css.svg"
+    },{
+        name: "Git",
+        frameworks: [],
+        level: "Pro",
+        logo: "/assets/icons/git.svg"
+    },{
+        name: "SQL",
+        frameworks: [],
+        level: "Pro",
+        logo: "/assets/icons/sql.svg"
+    }]
 };
+
+const levels = {
+    "Junior": "junior",
+    "Medium": "mid",
+    "Pro": "pro"
+}
+
 function Jd() {
     return v.jsxs("div", {
         className: "skills-container",
         children: [v.jsx("h2", {
             className: "skills-heading",
-            children: "Technical Skills"
+            children: [v.jsx("img", {
+                src: "/assets/icons/labels/skills.svg",
+                alt: "Skills"
+            }) , "Technical Skills"]
         }), v.jsx("div", {
             className: "skills-wrapper",
             children: dc.skills.map((e,t)=>v.jsx(He.Fragment, {
                 children: v.jsx("span", {
-                    children: e
+                    children:[v.jsx("div", {
+                        className: "skill-header",
+                        children: [v.jsx("img",{
+                            src: e.logo,
+                            alt: e.name
+                        }) ,v.jsx("span", {children: e.name}), v.jsx("div", {className: "level-"+levels[e.level], children: e.level})]
+                    }), v.jsx("div", {
+                        
+                    })]
                 })
             }, t))
         })]
     })
 }
+
+function matchTech(tech) {
+    switch (tech) {
+        case 'Python':
+        case 'Xamarin':
+            return 'dark-blue';
+        case 'Java':
+            return 'dark-orange';
+        case 'C#':
+            return 'dark-purple';
+        case 'C':
+        case '.NET':
+        case 'Numpy':
+        case 'CSS':
+            return 'normal-blue';
+        case 'HTML':
+        case 'Pandas':
+        case 'SQL':
+            return 'normal-red';
+        case 'Spring':
+        case 'Excel':
+            return 'normal-green';
+        case 'Scikit-learn':
+            return 'bright-orange';
+        case 'Flask':
+            return 'normal-black';
+        case 'Matplolib':
+        case 'EOSIO':
+            return 'normal-grey';
+        case 'C++':
+            return 'normal-pink';
+    }
+}
+
 function qd({date: e, title: t, company: c, description: n, technologies: r}) {
     return v.jsxs("div", {
         className: "about-experience-item",
@@ -9456,12 +9552,15 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
             className: "about-experience-date",
             children: e
         }), v.jsxs("div", {
-            children: [v.jsx("h2", {
-                className: "about-experience-title",
-                children: t
-            }), v.jsx("h2", {
-                className: "about-experience-title",
-                children: c
+            children: [ v.jsx("div", {
+                style: {width: 'fit-content'},
+                children: [v.jsx("h2", {
+                    className: "about-experience-title",
+                    children: t
+                }), v.jsx("h2", {
+                    className: "about-experience-title institution",
+                    children: c
+                })]
             }), v.jsx("p", {
                 className: "about-experience-description",
                 children: n
@@ -9469,32 +9568,60 @@ function qd({date: e, title: t, company: c, description: n, technologies: r}) {
                 className: "about-experience-technologies",
                 children: r.map((l,i)=>v.jsx("span", {
                     className: "about-experience-technology",
-                    children: l
+                    children: [v.jsx('div', {
+                        className: `terminal-button ${matchTech(l)}`
+                    }), l]
                 }, i))
             })]
         })]
     })
 }
-function edd({date: e, title: t, uni: u, description: n}) {
+
+function edd({date: e, title: t, uni: u, description: n , marks: mk, id: i}) {
     return v.jsxs("div", {
         className: "about-experience-item",
         children: [v.jsx("div", {
             className: "about-experience-date",
             children: e
         }), v.jsxs("div", {
-            children: [v.jsx("h2", {
-                className: "about-experience-title",
-                children: t
-            }), v.jsx("h2", {
-                className: "about-experience-title",
-                children: u
+            children: [v.jsxs("div", {
+                style: {width: 'fit-content'},
+                children: [v.jsx("h2", {
+                    className: "about-experience-title",
+                    id: i,
+                    children: t
+                    }), v.jsx("h2", {
+                    className: "about-experience-title institution",
+                    children: u
+                })]
             }), v.jsx("p", {
                 className: "about-experience-description",
-                children: n
+                children: [n, v.jsx("li", {
+                    children: mk
+                })]
             })]
         })]
     })
 }
+
+// v.jsxs("div", {
+//     style: {width: 'fit-content'},
+//     children: [v.jsx("h2", {
+//         className: "about-experience-title",
+//         id: i,
+//         children: t
+//         }), v.jsx("h2", {
+//         className: "about-experience-title institution",
+//         children: u
+//     })]
+// }), 
+// v.jsx("p", {
+//         className: "about-experience-description",
+//         children: [n, v.jsx("li", {
+//             children: mk
+//     })]
+// })
+
 function bd() {
     const {title: e, description: t, experiences: n, education: k} = dc;
     return v.jsxs("div", {
@@ -9519,7 +9646,10 @@ function bd() {
             className: "about-experience-section",
             children: [v.jsx("h2", {
                 className: "about-experience-heading",
-                children: "Work Experience"
+                children: [v.jsx("img", {
+                    src: "/assets/icons/labels/work.svg",
+                    alt: "Work Experience"
+                }) , "Work Experience"]
             }), n.map((r,l)=>v.jsx(qd, {
                 date: r.date,
                 title: r.title,
@@ -9531,19 +9661,27 @@ function bd() {
             className: "about-experience-section",
             children: [v.jsx("h2", {
                 className: "about-experience-heading",
-                children: "Education"
+                children: [v.jsx("img", {
+                    src: "/assets/icons/labels/edu.svg",
+                    alt: "Education"
+                }) , "Education"]
             }), k.map((r,l)=>v.jsx(edd, {
                 date: r.date,
                 title: r.title,
                 uni: r.uni,
-                description: r.description
+                description: r.description,
+                marks: r.mark
             }, l))],
         }), v.jsx("div", {
             className: "about-experience-section download-button",
             children: [v.jsx("p", {
-                children: "Download my full CV"
-            }), v.jsx("a", {
-                children: [v.jsx(dw, {})]
+                onClick: () => {
+                    const link = document.createElement('a');
+                    link.href = '/assets/data/CV Roberto Marsella.pdf';
+                    link.download = 'CV Roberto Marsella.pdf';
+                    link.click();
+                },
+                children: ["Download my CV", v.jsx(dw, {})]
             })]
         })]
     })
@@ -9903,15 +10041,17 @@ function Mp(e) {
 const Ju = {
     title: "Projects",
     projects: [{
-        name: "Project 1",
-        live: "https://tic-tac-emoji.vercel.app",
-        github: "https://github.com/mirayatech/tic-tac-emoji",
-        languages: ["Tech1", "Tech2", "Tech3"]
+        name: "YHOP Coupon System",
+        live: "https://github.com/ROB-MRS/YHOP-Coupon-System",
+        github: "https://github.com/ROB-MRS/YHOP-Coupon-System",
+        description: "A blockchain-based coupon system developed for the Lazio Chain Research Project to be efficient, cheap and easily adaptable to different business models.",
+        technologies: ["C++", "EOSIO"]
     }, {
-        name: "Project 2",
-        live: "https://tic-tac-emoji.vercel.app",
-        github: "https://github.com/mirayatech/tic-tac-emoji",
-        languages: ["Tech5", "Tech6", "Tech7"]
+        name: "Jongo Mobile Application",
+        live: "https://github.com/ROB-MRS/Applicazione-Jongo",
+        github: "https://github.com/ROB-MRS/Applicazione-Jongo",
+        description: "A mobile application developed for the Jongo Project. The app is designed to help users to find the best deals offered by Jongo's business (construction).",
+        technologies: [".NET", "Xamarin", "SQL"]
     }]
 };
 // function ap() {
@@ -9984,30 +10124,26 @@ function ap() {
                     })]
                 }), v.jsx("div", {
                     className: "screen",
-                    children: [// v.jsx("div", {
-                        //     className: "projects-card-gardient"
-                        // }), 
-                        v.jsxs("div", {
-                            className: "projects-card-links",
-                            children: [] // [v.jsx("a", {
-                            //     href: e.github,
-                            //     target: "_blank",
-                            //     children: v.jsx(hc, {})
-                            // }), v.jsx("a", {
-                            //     href: e.live,
-                            //     target: "_blank",
-                            //     children: v.jsx(op, {})
-                            // })]
-                        }), v.jsx("h3", {
+                    children: [ v.jsx("div", {
+                        children: [v.jsxs("div", {
                             className: "projects-card-name",
-                            children:[] // e.name
-                        }), v.jsx("div", {
-                            className: "projects-card-languages",
-                            children: [] // e.languages.map(t=>v.jsx("span", {
-                                // children: t
-                            // }, t))
-                        })]
-                })]
+                            children: [v.jsx("img", {
+                                src: "/assets/icons/labels/book.svg",
+                            }), e.name]
+                        }),
+                            v.jsx("p", {
+                                children: e.description
+                            })]
+                    }), v.jsx("div", {
+                        className: "about-experience-technologies",
+                        children: e.technologies.map((l,i)=>v.jsx("span", {
+                            className: "about-experience-technology",
+                            children: [v.jsx('div', {
+                                className: `terminal-button ${matchTech(l)}`
+                            }), l]
+                        }, i))
+                    })]
+                    })]
             }, e.name))
         })]
     })
@@ -10016,7 +10152,7 @@ function cp() {
     return v.jsxs("footer", {
         className: "footer",
         children: [v.jsx("span", {
-            children: "© 2024 Roberto Marsella - Camden Town, London - Last Update: 17 Feb 2024"
+            children: "© 2024 Roberto Marsella - London - Last Update: 21 May 2024"
         }), v.jsxs("div", {
             className: "footer-social",
             children: [v.jsx("a", {
@@ -10309,7 +10445,7 @@ function pp() {
                 })]
             }), v.jsx("p", {
                 className: "hero-wrapper-description",
-                children: "I'm passionate about something....."
+                children: "I'm a little bit of a lot of things. Here are a few of them..."
             })]
         })]
     })
