@@ -9584,23 +9584,43 @@ function edd({date: e, title: t, uni: u, description: n , marks: mk, id: i}) {
             className: "about-experience-date",
             children: e
         }), v.jsxs("div", {
-            style: {width: 'fit-content'},
-            children: [v.jsx("h2", {
-                className: "about-experience-title",
-                id: i,
-                children: t
-                }), v.jsx("h2", {
-                className: "about-experience-title institution",
-                children: u
-            })]
-        }), v.jsx("p", {
+            children: [v.jsxs("div", {
+                style: {width: 'fit-content'},
+                children: [v.jsx("h2", {
+                    className: "about-experience-title",
+                    id: i,
+                    children: t
+                    }), v.jsx("h2", {
+                    className: "about-experience-title institution",
+                    children: u
+                })]
+            }), v.jsx("p", {
                 className: "about-experience-description",
                 children: [n, v.jsx("li", {
                     children: mk
+                })]
             })]
         })]
     })
 }
+
+// v.jsxs("div", {
+//     style: {width: 'fit-content'},
+//     children: [v.jsx("h2", {
+//         className: "about-experience-title",
+//         id: i,
+//         children: t
+//         }), v.jsx("h2", {
+//         className: "about-experience-title institution",
+//         children: u
+//     })]
+// }), 
+// v.jsx("p", {
+//         className: "about-experience-description",
+//         children: [n, v.jsx("li", {
+//             children: mk
+//     })]
+// })
 
 function bd() {
     const {title: e, description: t, experiences: n, education: k} = dc;
@@ -10025,13 +10045,13 @@ const Ju = {
         live: "https://github.com/ROB-MRS/YHOP-Coupon-System",
         github: "https://github.com/ROB-MRS/YHOP-Coupon-System",
         description: "A blockchain-based coupon system developed for the Lazio Chain Research Project to be efficient, cheap and easily adaptable to different business models.",
-        languages: ["Tech1", "Tech2", "Tech3"]
+        technologies: ["C++", "EOSIO"]
     }, {
         name: "Jongo Mobile Application",
         live: "https://github.com/ROB-MRS/Applicazione-Jongo",
         github: "https://github.com/ROB-MRS/Applicazione-Jongo",
-        description: "A mobile application developed for the Jongo Project. The app is designed to help users to find the best deals in their area.",
-        languages: ["Tech5", "Tech6", "Tech7"]
+        description: "A mobile application developed for the Jongo Project. The app is designed to help users to find the best deals offered by Jongo's business (construction).",
+        technologies: [".NET", "Xamarin", "SQL"]
     }]
 };
 // function ap() {
@@ -10104,14 +10124,25 @@ function ap() {
                     })]
                 }), v.jsx("div", {
                     className: "screen",
-                    children: [ v.jsxs("div", {
-                        children: [v.jsx("img", {
-                            src: "/assets/icons/labels/book.svg",
-                        }), e.name]
-                    }),
-                        v.jsx("p", {
-                            children: e.description
-                        })]
+                    children: [ v.jsx("div", {
+                        children: [v.jsxs("div", {
+                            className: "projects-card-name",
+                            children: [v.jsx("img", {
+                                src: "/assets/icons/labels/book.svg",
+                            }), e.name]
+                        }),
+                            v.jsx("p", {
+                                children: e.description
+                            })]
+                    }), v.jsx("div", {
+                        className: "about-experience-technologies",
+                        children: e.technologies.map((l,i)=>v.jsx("span", {
+                            className: "about-experience-technology",
+                            children: [v.jsx('div', {
+                                className: `terminal-button ${matchTech(l)}`
+                            }), l]
+                        }, i))
+                    })]
                     })]
             }, e.name))
         })]
